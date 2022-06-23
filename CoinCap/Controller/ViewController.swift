@@ -14,27 +14,26 @@ class ViewController: UIViewController {
     
     var coins = [Coin]()
     let urlSessionApi = UrlSessionApi()
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        urlSessionApi.getApi {
-            data in
-            self.coins = data
-            
-            DispatchQueue.main.async {
-
-               self.coinCollectionView.reloadData()
-
-            }
-
-        }
+        connectApi()
+        
+        title = "CoinCap"
+        
         self.coinCollectionView.dataSource = self
         self.coinCollectionView.delegate = self
         self.coinCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
+extension ViewController: UICollectionViewDataSource,
+                            UICollectionViewDelegate,
+                            UICollectionViewDelegateFlowLayout
+{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return coins.count
     }
@@ -50,7 +49,20 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         return CGSize(width: 400, height: 100)
     }
     
-    
+    func connectApi() {
+        
+        urlSessionApi.getApi {
+            data in
+            self.coins = data
+            
+            DispatchQueue.main.async {
+
+               self.coinCollectionView.reloadData()
+
+            }
+
+        }
+    }
 
     
 }
