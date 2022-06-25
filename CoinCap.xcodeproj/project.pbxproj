@@ -17,7 +17,7 @@
 		4A4273572862401E00F77CCA /* CoinCapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4273562862401E00F77CCA /* CoinCapUITests.swift */; };
 		4A4273592862401E00F77CCA /* CoinCapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4273582862401E00F77CCA /* CoinCapUITestsLaunchTests.swift */; };
 		4A4273692862405400F77CCA /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4273682862405400F77CCA /* Coin.swift */; };
-		4A42736B286242B000F77CCA /* UrlSessionApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A42736A286242B000F77CCA /* UrlSessionApi.swift */; };
+		4A42736B286242B000F77CCA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A42736A286242B000F77CCA /* Network.swift */; };
 		4A99944A28638E14005E44CA /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A99944928638E14005E44CA /* CoinCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		4A4273562862401E00F77CCA /* CoinCapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCapUITests.swift; sourceTree = "<group>"; };
 		4A4273582862401E00F77CCA /* CoinCapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4A4273682862405400F77CCA /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
-		4A42736A286242B000F77CCA /* UrlSessionApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionApi.swift; sourceTree = "<group>"; };
+		4A42736A286242B000F77CCA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		4A99944928638E14005E44CA /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +85,7 @@
 		4A2F3ADA28634FBB00A159F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4A9994442863812E005E44CA /* Cell */,
 				4A4273392862401D00F77CCA /* ViewController.swift */,
 			);
 			path = Controller;
@@ -113,7 +114,6 @@
 		4A4273342862401D00F77CCA /* CoinCap */ = {
 			isa = PBXGroup;
 			children = (
-				4A9994442863812E005E44CA /* Cell */,
 				4A2F3ADA28634FBB00A159F9 /* Controller */,
 				4A4273672862404100F77CCA /* ViewModel */,
 				4A4273662862403400F77CCA /* View */,
@@ -163,7 +163,7 @@
 		4A4273672862404100F77CCA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				4A42736A286242B000F77CCA /* UrlSessionApi.swift */,
+				4A42736A286242B000F77CCA /* Network.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A42733A2862401D00F77CCA /* ViewController.swift in Sources */,
-				4A42736B286242B000F77CCA /* UrlSessionApi.swift in Sources */,
+				4A42736B286242B000F77CCA /* Network.swift in Sources */,
 				4A4273362862401D00F77CCA /* AppDelegate.swift in Sources */,
 				4A99944A28638E14005E44CA /* CoinCell.swift in Sources */,
 				4A4273692862405400F77CCA /* Coin.swift in Sources */,

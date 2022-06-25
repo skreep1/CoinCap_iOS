@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CoinCap-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoinCap" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZH4-qX-BqB">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="675"/>
                                 <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SWX-h3-ogP">
                                     <size key="itemSize" width="406" height="95"/>
@@ -45,20 +45,11 @@
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.16100993377483444" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e37-Hm-alE">
-                                                    <rect key="frame" x="361" y="37" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="PZn-yp-PHr" firstAttribute="top" secondItem="voI-FL-NjE" secondAttribute="top" id="0q0-ui-af5"/>
-                                                <constraint firstItem="e37-Hm-alE" firstAttribute="top" secondItem="voI-FL-NjE" secondAttribute="top" constant="37" id="F9w-GS-S1v"/>
-                                                <constraint firstAttribute="trailing" secondItem="e37-Hm-alE" secondAttribute="trailing" constant="3" id="JIX-7g-6GN"/>
                                                 <constraint firstAttribute="trailing" secondItem="PZn-yp-PHr" secondAttribute="trailing" id="Mfx-D7-7yB"/>
-                                                <constraint firstAttribute="bottom" secondItem="e37-Hm-alE" secondAttribute="bottom" constant="37" id="R70-4T-fJk"/>
                                                 <constraint firstItem="Tx6-ci-dgJ" firstAttribute="top" secondItem="voI-FL-NjE" secondAttribute="top" constant="60" id="T4l-4W-SnD"/>
                                                 <constraint firstAttribute="bottom" secondItem="PZn-yp-PHr" secondAttribute="bottom" id="qq7-iH-ohy"/>
                                                 <constraint firstItem="Tx6-ci-dgJ" firstAttribute="leading" secondItem="voI-FL-NjE" secondAttribute="leading" constant="30" id="tnq-9u-Ar0"/>
@@ -70,7 +61,6 @@
                                         <size key="customSize" width="406" height="95"/>
                                         <connections>
                                             <outlet property="nameCoin" destination="PZn-yp-PHr" id="qx5-V4-7Bz"/>
-                                            <outlet property="priceCoin" destination="e37-Hm-alE" id="sB8-ep-HFd"/>
                                             <outlet property="symbolCoin" destination="Tx6-ci-dgJ" id="XGs-50-JMN"/>
                                         </connections>
                                     </collectionViewCell>
@@ -82,11 +72,13 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZH4-qX-BqB" secondAttribute="trailing" id="BHE-UU-US3"/>
                             <constraint firstItem="ZH4-qX-BqB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OOL-28-bOb"/>
-                            <constraint firstItem="ZH4-qX-BqB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZZE-eM-Ga2"/>
+                            <constraint firstItem="ZH4-qX-BqB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ZZE-eM-Ga2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZH4-qX-BqB" secondAttribute="bottom" id="ehg-lp-CYD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="O9D-YA-AaF"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="CoinCap" largeTitleDisplayMode="never" id="O9D-YA-AaF"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="coinCollectionView" destination="ZH4-qX-BqB" id="Xwq-IX-quk"/>
                     </connections>

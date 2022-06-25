@@ -7,20 +7,18 @@
 
 import UIKit
 
+
+// MARK: List Coin ViewController
 class ViewController: UIViewController {
-    
     
     @IBOutlet weak var coinCollectionView: UICollectionView!
     
     var coins = [Coin]()
-    let urlSessionApi = UrlSessionApi()
-    let searchController = UISearchController(searchResultsController: nil)
+    let urlSessionApi = Network()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         connectApi()
-        
-        title = "CoinCap"
         
         self.coinCollectionView.dataSource = self
         self.coinCollectionView.delegate = self
@@ -63,7 +61,6 @@ extension ViewController: UICollectionViewDataSource,
 
         }
     }
-
     
 }
 

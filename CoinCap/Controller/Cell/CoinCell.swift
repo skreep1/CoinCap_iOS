@@ -10,12 +10,11 @@ import UIKit
 class CoinCell: UICollectionViewCell {
     
     @IBOutlet weak var nameCoin: UILabel!
-    @IBOutlet weak var priceCoin: UILabel!
     @IBOutlet weak var symbolCoin: UILabel!
     
     func setup(coin: Coin) {
         self.nameCoin.text = coin.name
         self.symbolCoin.text = coin.symbol
-        self.priceCoin.text = coin.priceUsd
+        
     }
 }

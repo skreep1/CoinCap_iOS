@@ -8,7 +8,7 @@
 import Foundation
 
 
-class UrlSessionApi {
+class Network {
     
     func getApi(comp: @escaping ([Coin]) -> ()) {
         let api = URL(string: "https://api.coincap.io/v2/assets")
