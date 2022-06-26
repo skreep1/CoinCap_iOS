@@ -9,7 +9,7 @@ import Foundation
 
 
 class Network {
-    
+    // getApi
     func getApi(comp: @escaping ([Coin]) -> ()) {
         let api = URL(string: "https://api.coincap.io/v2/assets")
         
