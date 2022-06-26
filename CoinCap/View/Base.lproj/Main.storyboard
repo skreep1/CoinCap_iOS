@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="toF-1m-Pl8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CoinCap-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoinCap" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZH4-qX-BqB">
-                                <rect key="frame" x="0.0" y="138" width="414" height="675"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="625"/>
                                 <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SWX-h3-ogP">
                                     <size key="itemSize" width="406" height="95"/>
@@ -66,52 +66,60 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eje-8G-DxX">
+                                <rect key="frame" x="20" y="86" width="354" height="94"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4c-K3-TiF">
+                                        <rect key="frame" x="30" y="37" width="53" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeF-7j-2rc">
+                                        <rect key="frame" x="270" y="31" width="77" height="32"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Random"/>
+                                        <connections>
+                                            <action selector="randomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="voL-az-tVa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="NeF-7j-2rc" firstAttribute="top" secondItem="eje-8G-DxX" secondAttribute="top" constant="32" id="4TC-uo-Del"/>
+                                    <constraint firstItem="N4c-K3-TiF" firstAttribute="top" secondItem="eje-8G-DxX" secondAttribute="top" constant="37" id="6kC-X4-1CG"/>
+                                    <constraint firstAttribute="trailing" secondItem="NeF-7j-2rc" secondAttribute="trailing" constant="30" id="WDx-hX-rdF"/>
+                                    <constraint firstAttribute="bottom" secondItem="N4c-K3-TiF" secondAttribute="bottom" constant="36" id="bXw-uq-nrD"/>
+                                    <constraint firstItem="N4c-K3-TiF" firstAttribute="leading" secondItem="eje-8G-DxX" secondAttribute="leading" constant="30" id="hD5-bM-yo5"/>
+                                    <constraint firstAttribute="bottom" secondItem="NeF-7j-2rc" secondAttribute="bottom" constant="31" id="uBz-hA-ACR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ZH4-qX-BqB" firstAttribute="top" secondItem="eje-8G-DxX" secondAttribute="bottom" constant="8" id="4NQ-gX-z13"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZH4-qX-BqB" secondAttribute="trailing" id="BHE-UU-US3"/>
+                            <constraint firstItem="eje-8G-DxX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ffs-LZ-nFq"/>
                             <constraint firstItem="ZH4-qX-BqB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OOL-28-bOb"/>
-                            <constraint firstItem="ZH4-qX-BqB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ZZE-eM-Ga2"/>
+                            <constraint firstItem="eje-8G-DxX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="86" id="SUU-2a-YdN"/>
+                            <constraint firstItem="ZH4-qX-BqB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="144" id="ZZE-eM-Ga2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZH4-qX-BqB" secondAttribute="bottom" id="ehg-lp-CYD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eje-8G-DxX" secondAttribute="trailing" constant="40" id="lqu-eY-li0"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="CoinCap" largeTitleDisplayMode="never" id="O9D-YA-AaF"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="O9D-YA-AaF"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="coinCollectionView" destination="ZH4-qX-BqB" id="Xwq-IX-quk"/>
+                        <outlet property="randomText" destination="N4c-K3-TiF" id="ViW-5c-Asw"/>
+                        <outlet property="randomView" destination="eje-8G-DxX" id="Ihk-aK-rcJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="82.366071428571431"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="rpj-3n-dGG">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="toF-1m-Pl8" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="bfP-an-XDY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QLE-6U-Dzl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qzk-Xf-NYQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="34.782608695652179" y="82.366071428571431"/>
         </scene>
     </scenes>
 </document>
