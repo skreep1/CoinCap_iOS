@@ -11,12 +11,6 @@ import UIKit
 // MARK: List Coin ViewController
 class ViewController: UIViewController {
     
-    @IBOutlet weak var randomView: UIView!
-    @IBOutlet weak var randomText: UILabel!
-    @IBAction func randomButton(_ sender: Any) {
-        randomCoin()
-    }
-    
     @IBOutlet weak var coinCollectionView: UICollectionView!
     
     var coins = [Coin]()
@@ -26,7 +20,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         connectApi()
         
-        self.randomView.layer.cornerRadius = 15
         self.coinCollectionView.dataSource = self
         self.coinCollectionView.delegate = self
         self.coinCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
@@ -69,10 +62,12 @@ extension ViewController: UICollectionViewDataSource,
         }
     }
     
-    private func randomCoin() {
-        let randomName = coins.randomElement()
-        randomText.text = randomName?.name
-    }
+    
+//  private func randomCoin() {
+//       let randomName = coins.randomElement()
+//        label.text = randomName?.name
+//   }
+    
     
 }
 
